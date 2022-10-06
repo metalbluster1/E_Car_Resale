@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+.primary-blue {
+  color: #003b73;
+}
+.primary-white {
+  color: #fff;
+}
+.primary-green-background {
+  background-color: #008000;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+// ==========  nav ============
+
+.main_nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0.2rem;
+}
+.main_title {
+  color: black;
+}
+.sub_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.4rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.left_nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: #fff;
+}
+.left_nav_li {
+  padding: 0.25rem 0.8rem 0.1rem 0.8rem;
+  margin: 0 0.2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+.nav_link {
+  color: #fff;
+}
+.nav_link:hover {
+  color: red;
+}
+
+// ======== user  nav  ============
+
+.user_nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0.2rem;
+  color: #fff;
+}
+
+// ===============  footer  ==============
+
+.footer {
+  padding: 1rem 0.2rem;
+  text-align: center;
+}
+.footer_container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.4rem 0 0.5rem 0;
+}
+
+.footer_nav_li {
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+
+  margin: 0 0.3rem;
+}
+.footer_label {
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+}
+i {
+  color: #fff;
+}
+
+.home {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+.home_title {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+// =============  Login page ===============
+
+.login_page {
+  position: fixed;
+  width: 100%;
+  height: 73.5vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 4rem 2rem 5.5rem 2rem;
+}
+
+.login_form {
+  text-align: start;
+  max-width: 400px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 2rem 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.login_form_ul {
+  list-style: none;
+}
+
+.login_li {
+  margin: 0.4rem 0;
+  font-size: 1.5rem;
+}
+
+.login_label_title {
+  text-align: center;
+  padding: 0.2rem 0 0.8rem 0;
+}
+
+.login_btn {
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+.login_input {
+  padding: 0.5rem 0rem;
+}
+.login_forget_create {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1rem;
+  justify-content: space-between;
+}
+.remember_me {
+  font-size: 1.1rem;
+  padding-left: 0.2rem;
+}
+.login_create_account {
+  padding-left: 2rem;
+}
+
+// =================  Sign Up =====================
+
+.signup_page {
+  position: fixed;
+  width: 100%;
+  height: 73.5vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 4rem 2rem 5.5rem 2rem;
+}
+
+.signup_form {
+  text-align: start;
+  max-width: 400px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 2rem 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.signup_form_ul {
+  list-style: none;
+}
+
+.signup_li {
+  margin: 0.4rem 0;
+  font-size: 1.5rem;
+}
+
+.signup_label_title {
+  text-align: center;
+  padding: 0.2rem 0 0.8rem 0;
+}
+
+.signup_btn {
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+.signup_input {
+  padding: 0.5rem 0rem;
+}
