@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Page from "./page";
 
 function SignupPage() {
+  const [userName, setUserName] = useState();
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
+
+  function handleSignup(e) {
+    e.preventDefault();
+    alert("Account created");
+  }
+
   return (
     <>
-      <section id="signup_page">
+      <Page title="Sign Up" id="signup_page">
         <div className="signup_page">
-          <form action="" className="signup_form">
+          <form onSubmit={handleSignup} className="signup_form">
             <ul className="signup_form_ul">
               <li className="signup_li signup_label_title">
                 <label htmlFor="signuptitle" className="signup_label">
@@ -19,7 +29,7 @@ function SignupPage() {
                 </label>
               </li>
               <li className="signup_li">
-                <input type="email" className="signup_input signup_email_input" placeholder="Enter user name" required />
+                <input onChange={(e) => setUserName(e.target.value)} type="email" className="signup_input signup_email_input" placeholder="Enter user name" required />
               </li>
 
               <li className="singup_li">
@@ -28,7 +38,7 @@ function SignupPage() {
                 </label>
               </li>
               <li className="signup_li">
-                <input type="text" className="signup_input signup_name_input" placeholder="Enter Name" required />
+                <input onChange={(e) => setName(e.target.value)} type="text" className="signup_input signup_name_input" placeholder="Enter Name" required />
               </li>
 
               <li className="singup_li">
@@ -37,7 +47,7 @@ function SignupPage() {
                 </label>
               </li>
               <li className="signup_li">
-                <input type="password" className="signup_input signup_password_input" placeholder="Password" required />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" className="signup_input signup_password_input" placeholder="Password" required />
               </li>
 
               <li className="singup_li">
@@ -61,7 +71,7 @@ function SignupPage() {
             </ul>
           </form>
         </div>
-      </section>
+      </Page>
     </>
   );
 }

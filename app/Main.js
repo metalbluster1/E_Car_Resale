@@ -3,17 +3,16 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //  Components
+import HomeNav from "./Components/HomeNav";
 import Footer from "./Components/Footer";
-import GuestHome from "./Components/GuestHome";
 import HomePage from "./Components/HomePage";
 import LoginPage from "./Components/LoginPage";
 import SignupPage from "./Components/SignupPage";
-import UserHome from "./Components/UserHome";
 
 function ExampleComponent() {
   return (
     <BrowserRouter>
-      <GuestHome />
+      <HomeNav />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />

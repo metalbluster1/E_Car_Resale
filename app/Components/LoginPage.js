@@ -1,9 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+
+import Page from "./page";
 
 function LoginPage() {
+  const [userName, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  function handleLogin(e) {
+    e.preventDefault();
+    alert("Thanks for submitting");
+  }
+
   return (
-    <section id="login_page" className="login_page">
-      <form action="" className="login_form">
+    <Page title="Login Page" id="login_page" className="login_page">
+      <form onSubmit={handleLogin} className="login_form">
         <ul className="login_form_ul">
           <li className="login_li login_label_title">
             <label htmlFor="" className="login_label">
@@ -16,7 +27,7 @@ function LoginPage() {
             </label>
           </li>
           <li className="login_li">
-            <input type="email" className="login_input login_username_input" placeholder="Enter user name" required />
+            <input onChange={(e) => setUserName(e.target.value)} type="email" className="login_input login_username_input" placeholder="Enter user name" required />
           </li>
           <li className="login_li">
             <label htmlFor="password" className="login_label login_label_password">
@@ -24,7 +35,7 @@ function LoginPage() {
             </label>
           </li>
           <li className="login_li">
-            <input type="password" className="login_input login_password_input" placeholder="Password" />
+            <input onChange={(e) => setPassword(e.target.value)} type="password" className="login_input login_password_input" placeholder="Password" />
           </li>
           <li className="login_li">
             <input type="checkbox" className="login_input login_checkbox_input" />
@@ -36,20 +47,20 @@ function LoginPage() {
           <li>
             <ul className="login_li login_forget_create">
               <li>
-                <a href="#" className="forget_password">
+                <a href="#" className="forget_password secondary-blue">
                   Forget Password?
                 </a>
               </li>
               <li>
-                <a href="#" className="create_account">
+                <NavLink to="/signup" className="create_account secondary-blue">
                   Create account
-                </a>
+                </NavLink>
               </li>
             </ul>
           </li>
         </ul>
       </form>
-    </section>
+    </Page>
   );
 }
 
