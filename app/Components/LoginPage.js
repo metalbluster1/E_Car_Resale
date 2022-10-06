@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Page from "./page";
 
 function LoginPage() {
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  let Navigate = useNavigate();
+
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("userNameToken", JSON.stringify(userName));
+  }, [userName]);
 
   function handleLogin(e) {
     e.preventDefault();
-    alert("Thanks for submitting");
+    Navigate("/");
+    window.location.reload();
   }
 
   return (

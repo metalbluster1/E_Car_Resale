@@ -18,6 +18,9 @@
 .primary-white {
   color: #fff;
 }
+.primary-black-background {
+  background-color: black;
+}
 .primary-green-background {
   background-color: #008000;
 }
@@ -69,6 +72,9 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 0.2rem;
   color: #fff;
+}
+.logout_btn:hover {
+  color: red;
 }
 
 // ===============  footer  ==============

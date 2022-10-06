@@ -4,8 +4,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GuestNav from "./GuestNav";
 import UserNav from "./UserNav";
+import LoginPage from "./LoginPage";
 
-function HomeNav() {
+function HomeNav(props) {
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("userNameToken")) {
+      const saved = localStorage.getItem("userNameToken");
+      const name = JSON.parse(saved);
+      if (name != "") {
+        setIsLogin(true);
+      } else {
+        setIsLogin(false);
+      }
+    } else {
+      setIsLogin(false);
+    }
+  }, []);
+
   return (
     <nav className="main_nav" id="guest_nav">
       <ul className="sub_nav">
@@ -16,7 +33,7 @@ function HomeNav() {
             </NavLink>
           </h1>
         </li>
-        <GuestNav />
+        {isLogin ? <UserNav /> : <GuestNav />}
       </ul>
     </nav>
   );
